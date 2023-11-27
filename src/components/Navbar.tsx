@@ -2,6 +2,7 @@ import { Box, ColorModeContext, HStack, Image, Text } from "@chakra-ui/react";
 import logo from "../assets/logo.png";
 import ColorModeSwitch from "./ColorModeSwitch";
 import NavbarCart from "./NavbarCart";
+import NavbarSignIn from "./NavbarSignIn";
 
 const Navbar = () => {
   return (
@@ -9,6 +10,7 @@ const Navbar = () => {
       <Image src={logo} boxSize="80px"></Image>
       <Box>
         <HStack>
+          <NavbarSignIn />
           <NavbarCart />
           <ColorModeSwitch />
         </HStack>
