@@ -1,13 +1,13 @@
-import { Box, ColorModeContext, HStack, Image, Text } from "@chakra-ui/react";
-import logo from "../assets/logo.png";
+import { Box, HStack } from "@chakra-ui/react";
 import ColorModeSwitch from "./ColorModeSwitch";
 import NavbarCart from "./NavbarCart";
 import NavbarSignIn from "./NavbarSignIn";
+import NavbarLogo from "./NavbarLogo";
 
 const Navbar = () => {
   return (
     <HStack justifyContent={"space-between"} padding="10px">
-      <Image src={logo} boxSize="80px"></Image>
+      <NavbarLogo />
       <Box>
         <HStack>
           <NavbarSignIn />
