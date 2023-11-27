@@ -3,11 +3,13 @@ import ColorModeSwitch from "./ColorModeSwitch";
 import NavbarCart from "./NavbarCart";
 import NavbarSignIn from "./NavbarSignIn";
 import NavbarLogo from "./NavbarLogo";
+import NavbarSearchInput from "./NavbarSearchInput";
 
 const Navbar = () => {
   return (
-    <HStack justifyContent={"space-between"} padding="10px">
+    <HStack padding="10px">
       <NavbarLogo />
+      <NavbarSearchInput />
       <Box>
         <HStack>
           <NavbarSignIn />

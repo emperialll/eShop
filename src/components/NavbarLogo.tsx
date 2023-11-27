@@ -6,9 +6,6 @@ const NavbarLogo = () => {
     <Box>
       <HStack>
         <Image src={logo} boxSize="80px"></Image>
-        <Text margin="0" fontSize="larger" fontWeight="bold">
-          eSHOP
-        </Text>
       </HStack>
     </Box>
   );
