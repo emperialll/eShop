@@ -1,5 +1,6 @@
 import { Grid, GridItem, Show } from "@chakra-ui/react";
 import Navbar from "./components/Navbar";
+import HeroCarousel from "./components/HeroCarousel";
 
 function App() {
   return (
@@ -13,7 +14,9 @@ function App() {
         <Navbar />
       </GridItem>
       <Show above="lg">
-        <GridItem area="hero">Hero</GridItem>
+        <GridItem area="hero">
+          <HeroCarousel />
+        </GridItem>
       </Show>
       <Show above="lg">
         <GridItem area="aside">Side</GridItem>
