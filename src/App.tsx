@@ -10,18 +10,27 @@ function App() {
         lg: `"nav nav" "hero hero" "aside main" " footer footer"`,
       }}
     >
+      {/* ----******---- NAVBAR ----******---- */}
       <GridItem area="nav">
         <Navbar />
       </GridItem>
+
+      {/* ----******---- HERO SECTION ----******---- */}
       <Show above="lg">
         <GridItem area="hero">
           <HeroCarousel />
         </GridItem>
       </Show>
+
+      {/* ----******---- SIDE MENU ----******---- */}
       <Show above="lg">
         <GridItem area="aside">Side</GridItem>
       </Show>
+
+      {/* ----******---- MAIN ----******---- */}
       <GridItem area="main">Main</GridItem>
+
+      {/* ----******---- FOOTER ----******---- */}
       <GridItem area="footer">Footer</GridItem>
     </Grid>
   );

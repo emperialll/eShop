@@ -10,7 +10,7 @@ import hero6 from "../assets/images/hero/6.jpeg";
 
 const HeroCarousel = () => {
   return (
-    <Carousel style={{ height: "500px", width: "100%" }}>
+    <Carousel>
       {/* First Item */}
       <Carousel.Item>
         <Box w="100%" h="500px">
