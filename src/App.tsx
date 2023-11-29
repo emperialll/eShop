@@ -18,9 +18,7 @@ function App() {
 
       {/* ----******---- HERO SECTION ----******---- */}
       <Show above="lg">
-        <GridItem area="hero">
-          <HeroCarousel />
-        </GridItem>
+        <GridItem area="hero">{/* <HeroCarousel /> */}</GridItem>
       </Show>
 
       {/* ----******---- SIDE MENU ----******---- */}
