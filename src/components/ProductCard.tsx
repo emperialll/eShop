@@ -18,7 +18,7 @@ interface Props {
 }
 const ProductCard = ({ product }: Props) => {
   return (
-    <Card borderRadius={10} overflow={"hidden"}>
+    <Card width="300px" borderRadius={10} overflow={"hidden"}>
       <Box height="300px" position="relative">
         <Image
           src={product.image}
