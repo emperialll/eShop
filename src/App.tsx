@@ -2,6 +2,7 @@ import { Grid, GridItem, Show } from "@chakra-ui/react";
 import Navbar from "./components/Navbar";
 import HeroCarousel from "./components/HeroCarousel";
 import ProductGrid from "./components/ProductGrid";
+import CategoryList from "./components/CategoryList";
 
 function App() {
   return (
@@ -25,7 +26,9 @@ function App() {
 
       {/* ----******---- SIDE MENU ----******---- */}
       <Show above="lg">
-        <GridItem area="aside">Side</GridItem>
+        <GridItem area="aside">
+          <CategoryList />
+        </GridItem>
       </Show>
 
       {/* ----******---- MAIN ----******---- */}
