@@ -1,4 +1,4 @@
-import { Grid, GridItem, Show } from "@chakra-ui/react";
+import { Grid, GridItem, Show, Text } from "@chakra-ui/react";
 import Navbar from "./Navbar";
 import CheckoutProductCard from "./CheckoutProductCard";
 import CheckoutSubtotal from "./CheckoutSubtotal";
@@ -27,6 +27,9 @@ const Checkout = () => {
 
       {/* ----******---- MAIN ----******---- */}
       <GridItem area="main" padding="10px">
+        <Text as="b" fontSize="3xl">
+          Your shopping basket:
+        </Text>
         <CheckoutProductCard />
       </GridItem>
 
