@@ -1,6 +1,7 @@
 import { Grid, GridItem, Show } from "@chakra-ui/react";
 import Navbar from "./Navbar";
 import CheckoutProductCard from "./CheckoutProductCard";
+import CheckoutSubtotal from "./CheckoutSubtotal";
 
 const Checkout = () => {
   return (
@@ -30,7 +31,9 @@ const Checkout = () => {
       </GridItem>
 
       {/* ----******---- Chcekout Section ----******---- */}
-      <GridItem area="checkout">Checkout Summary</GridItem>
+      <GridItem area="checkout" padding="10px">
+        <CheckoutSubtotal />
+      </GridItem>
 
       {/* ----******---- FOOTER ----******---- */}
       <GridItem area="footer">Footer</GridItem>
