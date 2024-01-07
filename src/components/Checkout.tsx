@@ -1,16 +1,17 @@
 import { Grid, GridItem, Show } from "@chakra-ui/react";
 import Navbar from "./Navbar";
+import CheckoutProductCard from "./CheckoutProductCard";
 
 const Checkout = () => {
   return (
     <Grid
       templateAreas={{
-        base: `"nav" "main" "checkout" "footer"`,
-        lg: `"nav nav" "banner banner" "main checkout" " footer footer"`,
+        base: `"nav" "main" "footer" "checkout"`,
+        lg: `"nav nav" "banner banner" "main checkout" "footer footer"`,
       }}
       templateColumns={{
         base: "1fr",
-        lg: "200px 1fr",
+        lg: "70% 1fr",
       }}
     >
       {/* ----******---- NAVBAR ----******---- */}
@@ -24,7 +25,9 @@ const Checkout = () => {
       </Show>
 
       {/* ----******---- MAIN ----******---- */}
-      <GridItem area="main">Order List</GridItem>
+      <GridItem area="main" padding="10px">
+        <CheckoutProductCard />
+      </GridItem>
 
       {/* ----******---- Chcekout Section ----******---- */}
       <GridItem area="checkout">Checkout Summary</GridItem>
