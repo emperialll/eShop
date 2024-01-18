@@ -12,11 +12,13 @@ import {
 } from "@chakra-ui/react";
 import { Product } from "../hooks/useProducts";
 import ProductRating from "./ProductRating";
+import { useShoppingCart } from "../context/ShoppingCartContext";
 
 interface Props {
   product: Product;
 }
 const ProductCard = ({ product }: Props) => {
+  const { increaseCartQuantity } = useShoppingCart();
   return (
     <Card>
       <Box height="300px" position="relative">
@@ -39,7 +41,11 @@ const ProductCard = ({ product }: Props) => {
           </HStack>
           <Box>
             <Flex justifyContent="center">
-              <Button colorScheme="teal" variant="outline">
+              <Button
+                colorScheme="teal"
+                variant="outline"
+                onClick={() => increaseCartQuantity(product.id)}
+              >
                 Add to cart
               </Button>
             </Flex>

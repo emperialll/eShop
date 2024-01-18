@@ -3,46 +3,49 @@ import Navbar from "./Navbar";
 import HeroCarousel from "./HeroCarousel";
 import ProductGrid from "./ProductGrid";
 import CategoryList from "./CategoryList";
+import { ShoppingCartProvider } from "../context/ShoppingCartContext";
 
 function Home() {
   return (
-    <Grid
-      templateAreas={{
-        base: `"nav" "main" "footer"`,
-        lg: `"nav nav" "hero hero" "aside main" " footer footer"`,
-      }}
-      templateColumns={{
-        base: "1fr",
-        lg: "200px 1fr",
-      }}
-    >
-      {/* ----******---- NAVBAR ----******---- */}
-      <GridItem area="nav">
-        <Navbar />
-      </GridItem>
-
-      {/* ----******---- HERO SECTION ----******---- */}
-      <Show above="lg">
-        <GridItem area="hero">
-          <HeroCarousel />
+    <ShoppingCartProvider>
+      <Grid
+        templateAreas={{
+          base: `"nav" "main" "footer"`,
+          lg: `"nav nav" "hero hero" "aside main" " footer footer"`,
+        }}
+        templateColumns={{
+          base: "1fr",
+          lg: "200px 1fr",
+        }}
+      >
+        {/* ----******---- NAVBAR ----******---- */}
+        <GridItem area="nav">
+          <Navbar />
         </GridItem>
-      </Show>
 
-      {/* ----******---- SIDE MENU ----******---- */}
-      <Show above="lg">
-        <GridItem area="aside">
-          <CategoryList />
+        {/* ----******---- HERO SECTION ----******---- */}
+        <Show above="lg">
+          <GridItem area="hero">
+            <HeroCarousel />
+          </GridItem>
+        </Show>
+
+        {/* ----******---- SIDE MENU ----******---- */}
+        <Show above="lg">
+          <GridItem area="aside">
+            <CategoryList />
+          </GridItem>
+        </Show>
+
+        {/* ----******---- MAIN ----******---- */}
+        <GridItem area="main">
+          <ProductGrid />
         </GridItem>
-      </Show>
 
-      {/* ----******---- MAIN ----******---- */}
-      <GridItem area="main">
-        <ProductGrid />
-      </GridItem>
-
-      {/* ----******---- FOOTER ----******---- */}
-      <GridItem area="footer">Footer</GridItem>
-    </Grid>
+        {/* ----******---- FOOTER ----******---- */}
+        <GridItem area="footer">Footer</GridItem>
+      </Grid>
+    </ShoppingCartProvider>
   );
 }
 
